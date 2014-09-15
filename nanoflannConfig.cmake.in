@@ -1,0 +1,17 @@
+#######################################################
+# nanoflann source dir
+set( nanoflann_SOURCE_DIR "@CMAKE_CURRENT_SOURCE_DIR@")
+
+#######################################################
+# nanoflann build dir
+set( nanoflann_DIR "@CMAKE_CURRENT_BINARY_DIR@")
+
+#######################################################
+set( nanoflann_INCLUDE_DIR  "@nanoflann_INCLUDE_DIR@" )
+set( nanoflann_INCLUDE_DIRS "@nanoflann_INCLUDE_DIR@" )
+
+set( nanoflann_LIBRARIES    "@nanoflann_LIBRARIES@" )
+set( nanoflann_LIBRARY      "@nanoflann_LIBRARIES@" )
+
+set( nanoflann_LIBRARY_DIR  "@nanoflann_LIBRARY_DIR@" )
+set( nanoflann_LIBRARY_DIRS "@nanoflann_LIBRARY_DIR@" )

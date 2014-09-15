@@ -119,3 +119,13 @@ IF(CMAKE_USE_DEB_POSTFIXS)
 		DESTINATION ${libnanoflann_dev_INSTALL_PREFIX}share/doc/libnanoflann-dev/ )
 ENDIF(CMAKE_USE_DEB_POSTFIXS)
 
+
+
+################################################################################
+# Create the nanoflannConfig.cmake file for other cmake projects.
+GET_TARGET_PROPERTY( FULL_LIBRARY_NAME ${PROJECT_NAME} LOCATION )
+SET(nanoflann_INCLUDE_DIR "${nanoflann_SOURCE_DIR}/include")
+CONFIGURE_FILE( ${CMAKE_CURRENT_SOURCE_DIR}/nanoflannConfig.cmake.in
+    ${CMAKE_CURRENT_BINARY_DIR}/nanoflannConfig.cmake @ONLY IMMEDIATE )
+export( PACKAGE nanoflann )
+INSTALL(DIRECTORY include/nanoflann DESTINATION ${CMAKE_INSTALL_PREFIX}/include FILES_MATCHING PATTERN "*.hpp" )
